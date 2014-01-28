@@ -52,6 +52,9 @@ func main() {
 		log.Panic(err)
 	}
 
+	// wait a little before sending messages
+	time.Sleep(time.Second)
+
 	// send ping messages async
 	go ping_loop(ticker, publisher)
 
